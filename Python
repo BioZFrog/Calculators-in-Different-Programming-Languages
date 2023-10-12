@@ -1,0 +1,17 @@
+print("___---___ CALCULATOR IN PYTHON BY BIOZFROG___---___ \n")
+Number1 = input("Enter a Number: ")
+Number1 = int(Number1)
+Operator = input("Enter an Operator: ")
+Number2 = input("Enter another Number: ")
+Number2 = int(Number2)
+
+if Operator == "/":
+  print(Number1 / Number2)
+elif Operator == "*":
+  print(Number1 * Number2)
+elif Operator == "+":
+  print(Number1 + Number2)
+elif Operator == "-":
+  print(Number1 - Number2)
+else:
+  print("Please try agin. You may have entered Wrong Operator or Wrong Numbers.")
