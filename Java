@@ -1,7 +1,7 @@
 import java.util.Scanner;
 class Main {
   public static void main(String[] args) {
-    
+
    Scanner scan = new Scanner(System.in);
     System.out.println("___---___ CALCULATOR IN JAVA BY BIOZFROG___---___\n");
     System.out.println("Enter a Number: ");
@@ -14,16 +14,16 @@ class Main {
     int number2 = scan.nextInt();
 
     if(Operator == '+'){
-    System.out.println(number1 + number2);
+      System.out.println("Your Answer of " + number1 + " + " + number2 + " = " + (number1 + number2));
     }
     else if(Operator == '-'){
-      System.out.println(number1 - number2);
+      System.out.println("Your Answer of " + number1 + " - " + number2 + " = " + (number1 - number2));
     }
     else if(Operator == '*'){
-      System.out.println(number1 * number2);
+      System.out.println("Your Answer of " + number1 + " * " + number2 + " = " + (number1 * number2));
     }
     else if(Operator == '/'){
-      System.out.println(number1 / number2);
+      System.out.println("Your Answer of " + number1 + " / " + number2 + " = " + (number1 / number2));
     }
   }
 
