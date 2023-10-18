@@ -6,12 +6,17 @@ Number2 = input("Enter another Number: ")
 Number2 = int(Number2)
 
 if Operator == "/":
-  print(Number1 / Number2)
+  print("Your Answer of " + str(Number1) + " / " + str(Number2) + " = " +
+        str(Number1 / Number2))
 elif Operator == "*":
-  print(Number1 * Number2)
+  print("Your Answer of " + str(Number1) + " * " + str(Number2) + " = " +
+        str(Number1 * Number2))
 elif Operator == "+":
-  print(Number1 + Number2)
+  print("Your Answer of " + str(Number1) + " + " + str(Number2) + " = " +
+        str(Number1 + Number2))
 elif Operator == "-":
-  print(Number1 - Number2)
+  print("Your Answer of " + str(Number1) + " - " + str(Number2) + " = " +
+        str(Number1 - Number2))
 else:
-  print("Please try agin. You may have entered Wrong Operator or Wrong Numbers.")
+  print(
+      "Please try agin. You may have entered Wrong Operator or Wrong Numbers.")
