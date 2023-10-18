@@ -1,36 +1,35 @@
 #include <iostream>
-using std::cout;
 using std::cin;
+using std::cout;
 using std::string;
 int main() {
-    
-    cout<<"___---___ CALCULATOR IN C++ BY BIOZFROG___---___"<<std::endl;
-        int Number1;
-        int Number2;
-        string Operator;
-        
-        cout<<"Enter a Number: ";
-        cin>>Number1;
-        cout<<"Enter an Operator: ";
-        cin>>Operator;
-        cout<<"Enter another Number: ";
-        cin>>Number2;
-        
-        if(Operator == "/"){
-            cout<< Number1 / Number2;
-        }
-        else if(Operator == "*"){
-            cout<< Number1 * Number2;
-        }
-        else if(Operator == "+"){
-            cout<< Number1 + Number2;
-        }
-        else if(Operator == "-"){
-            cout<< Number1 - Number2;
-        }
-        else{
-            cout<<"Please try agin. You may have entered Wrong Operator.";
-        }
-            return 0;
-        
+
+  cout << "___---___ CALCULATOR IN C++ BY BIOZFROG___---___" << std::endl;
+  int Number1;
+  int Number2;
+  string Operator;
+
+  cout << "Enter a Number: ";
+  cin >> Number1;
+  cout << "Enter an Operator: ";
+  cin >> Operator;
+  cout << "Enter another Number: ";
+  cin >> Number2;
+
+  if (Operator == "/") {
+    cout << "Your Answer of " << Number1 << " " << Operator << " " << Number2;
+    cout << " : " << Number1 / Number2;
+  } else if (Operator == "*") {
+    cout << "Your Answer of " << Number1 << " " << Operator << " " << Number2;
+    cout << " : " << Number1 * Number2;
+  } else if (Operator == "+") {
+    cout << "Your Answer of " << Number1 << " " << Operator << " " << Number2;
+    cout << ": " <<Number1 + Number2;
+  } else if (Operator == "-") {
+    cout << "Your Answer of " << Number1 << " " << Operator << " " << Number2;
+    cout << ": " <<Number1 - Number2;
+  } else {
+    cout << "Please try agin. You may have entered Wrong Operator.";
+  }
+  return 0;
 }
