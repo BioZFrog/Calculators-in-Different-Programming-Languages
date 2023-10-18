@@ -2,34 +2,34 @@
 #include <string.h>
 int main() {
   printf("___---___ CALCULATOR IN C BY BIOZFROG___---___\n");
-   int Number1;
-   int Number2;
-   char Operator[10];
+  int Number1;
+  int Number2;
+  char Operator[10];
 
-   printf("Enter a Number: ");
-   scanf("%d", &Number1);
-   printf("Enter an Operator: ");
-   scanf("%s", Operator);
-   printf("Enter another Number: ");
-   scanf("%d", &Number2);
-  
-   int Divide = Number1 / Number2;
-   int Add = Number1 + Number2;
-   int Subtract = Number1 - Number2;
-   int Multiply = Number1 * Number2;
-  
-  if(strcmp(Operator, "/") == 0){
-    printf("%d", Divide);
-   }
-  if(strcmp(Operator, "+") == 0){
-    printf("%d", Add);
+  printf("Enter a Number: ");
+  scanf("%d", &Number1);
+  printf("Enter an Operator: ");
+  scanf("%s", Operator);
+  printf("Enter another Number: ");
+  scanf("%d", &Number2);
+
+  int Divide = Number1 / Number2;
+  int Add = Number1 + Number2;
+  int Subtract = Number1 - Number2;
+  int Multiply = Number1 * Number2;
+
+  if (strcmp(Operator, "/") == 0) {
+    printf("Your Answer of %d / %d = %d", Number1, Number2, Divide);
   }
-  if(strcmp(Operator, "*") == 0){
-    printf("%d", Multiply);
+  if (strcmp(Operator, "+") == 0) {
+    printf("Your Answer of %d + %d = %d", Number1, Number2, Add);
   }
-  if(strcmp(Operator, "-") == 0){
-    printf("%d", Subtract);
+  if (strcmp(Operator, "*") == 0) {
+    printf("Your Answer of %d * %d = %d", Number1, Number2, Multiply);
+  }
+  if (strcmp(Operator, "-") == 0) {
+    printf("Your Answer of %d - &d = &d", Number1, Number2, Subtract);
   }
 
-   return 0;
+  return 0;
 }
