@@ -5,6 +5,7 @@ let operator = '';
 let operand1 = 0;
 let operand2 = null;
 
+
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         const value = button.value;
