@@ -1,0 +1,89 @@
+const display = document.querySelector('.display');
+const buttons = document.querySelectorAll('button');
+let clearDisplay = true;
+let operator = '';
+let operand1 = 0;
+let operand2 = null;
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const value = button.value;
+        if (value === '+' || value === '-' || value === '*' || value === '/') {
+            handleOperator(value);
+        } else if (value === 'all-clear') {
+            clearAll();
+        } else if (value === 'calculate') {
+            calculate();
+        } else {
+            handleNumber(value);
+        }
+    });
+});
+
+function handleNumber(number) {
+    if (clearDisplay) {
+        display.value = number;
+        clearDisplay = false;
+    } else {
+        display.value += number;
+    }
+}
+
+function handleOperator(operatorValue) {
+    if (!operand1) {
+        operand1 = parseFloat(display.value);
+    } else if (operator && operand2 === null) {
+        evaluate();
+        operator = operatorValue;
+        return;
+    }
+
+    operator = operatorValue;
+    operand2 = null;
+    clearDisplay = true;
+}
+
+function clearAll() {
+    display.value = '';
+    clearDisplay = true;
+    operator = '';
+    operand1 = 0;
+    operand2 = null;
+}
+
+function calculate() {
+    if (operand2 === null) {
+        operand2 = parseFloat(display.value);
+    }
+    if (operand1 && operator && operand2) {
+        evaluate();
+    }
+}
+
+function evaluate() {
+    let result;
+    if (isNaN(operand1) || isNaN(operand2)) {
+        return;
+    }
+    switch (operator) {
+        case '+':
+            result = operand1 + operand2;
+            break;
+        case '-':
+            result = operand1 - operand2;
+            break;
+        case '*':
+            result = operand1 * operand2;
+            break;
+        case '/':
+            result = operand1 / operand2;
+            break;
+        default:
+            return;
+    }
+    display.value = result;
+    operand1 = result;
+    operator = '';
+    operand2 = null;
+    clearDisplay = true;
+}
