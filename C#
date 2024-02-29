@@ -4,7 +4,7 @@ public class HelloWorld
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("___---___ CALCULATOR IN C BY BIOZFROG___---___\n");
+        Console.WriteLine("___---___ CALCULATOR IN C# BY BIOZFROG___---___\n");
 Console.WriteLine("Enter a Number: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
