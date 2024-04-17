@@ -5,38 +5,38 @@ public class HelloWorld
     public static void Main(string[] args)
     {
         Console.WriteLine("___---___ CALCULATOR IN C# BY BIOZFROG___---___\n");
-Console.WriteLine("Enter a Number: ");
-int num = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter a Number: ");
+        int num = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Enter a Operator: ");
-String op = Console.ReadLine();
+        Console.WriteLine("Enter a Operator: ");
+        String op = Console.ReadLine();
+    
+        Console.WriteLine("Enter another Number: ");
+        int num2 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Enter another Number: ");
-int num2 = Convert.ToInt32(Console.ReadLine());
 
+        int numsum = num + num2;
+        int numsub = num - num2;
 
-int numsum = num + num2;
-int numsub = num - num2;
+        if (op == "/")
+        {
+            Console.WriteLine($"Your Answer of {num} {op} {num2} : " + num / num2);
+        }
+        else if (op == "*")
+        {
+            Console.WriteLine($"Your Answer of {num} {op} {num2} : " + num * num2);
+        }
+        else if (op == "+")
+        {
+            Console.WriteLine($"Your Answer of {num} {op} {num2} : " + numsum);
+        }else if(op == "-")
+        {
+            Console.WriteLine($"Your Answer of {num} {op} {num2} : {numsub}");
 
-if (op == "/")
-{
-    Console.WriteLine($"Your Answer of {num} {op} {num2} : " + num / num2);
-}
-else if (op == "*")
-{
-    Console.WriteLine($"Your Answer of {num} {op} {num2} : " + num * num2);
-}
-else if (op == "+")
-{
-    Console.WriteLine($"Your Answer of {num} {op} {num2} : " + numsum);
-}else if(op == "-")
-{
-    Console.WriteLine($"Your Answer of {num} {op} {num2} : {numsub}");
-
-}
-else
-{
-    Console.WriteLine("Please try agin. You may have entered Wrong Operator.");
-}
+        }
+        else
+        {
+            Console.WriteLine("Please try agin. You may have entered Wrong Operator.");
+        }
     }
 }
